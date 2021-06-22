@@ -1,0 +1,76 @@
+[
+ {
+  "groupId": "TBG_INDEXFORM",
+  "name": "TBG_INDEXFORM",
+  "nameDescription": "TB指数类型字段",
+  "wordType": "double",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_INDEXFORM",
+  "name": "TB_INDEXFORM_FIVEDTURNOVER",
+  "nameDescription": "五日分钟级累计平均成交额",
+  "wordType": "double_2d",
+  "wordDataType": 1,
+  "wordNum": 2,
+  "subNames": [
+   "时间",
+   "五日分钟级累计平均成交额"
+  ]
+ },
+ {
+  "groupId": "TBG_INDEXFORM",
+  "name": "TB_INDEXFORM_FIVEDVOLUME",
+  "nameDescription": "五日平均成交量",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 1,
+  "subNames": [
+   "五日平均成交量"
+  ]
+ },
+ {
+  "groupId": "TBG_INDEXFORM",
+  "name": "TB_INDEXFORM_POSITIONCHANGE",
+  "nameDescription": "仓位变化",
+  "wordType": "double_1d",
+  "wordDataType": 0,
+  "wordNum": 4,
+  "subNames": [
+   "换手",
+   "净流入",
+   "流入",
+   "流出"
+  ]
+ },
+ {
+  "groupId": "TBG_INDEXFORM",
+  "name": "TB_INDEXFORM_QUOTA",
+  "nameDescription": "行情指标",
+  "wordType": "double_1d",
+  "wordDataType": 0,
+  "wordNum": 4,
+  "subNames": [
+   "流通市值",
+   "总市值",
+   "市盈率",
+   "市净率"
+  ]
+ },
+ {
+  "groupId": "TBG_INDEXFORM",
+  "name": "TB_INDEXFORM_STATISTICS",
+  "nameDescription": "涨跌统计",
+  "wordType": "int_1d",
+  "wordDataType": 0,
+  "wordNum": 4,
+  "subNames": [
+   "涨数",
+   "跌数",
+   "涨停数",
+   "跌停数"
+  ]
+ }
+]

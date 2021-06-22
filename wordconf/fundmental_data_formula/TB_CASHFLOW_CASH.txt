@@ -1,0 +1,90 @@
+//------------------------------------------------------------------------
+// 简称: TB_CASHFLOW_CASH
+// 名称: 现金及现金等价物
+// 类别: 公式应用
+// 类型: 内建应用
+//------------------------------------------------------------------------
+Params
+	Enum<String>    RepType(["季报","半年报","年报"]);//报告类型
+	Numeric    		BackTimes(0);	  //报告期	0当期1上一期 以此类推 
+	Numeric         dateshift(15);	  //报告偏移天数 比如季度报可能在统计日期之后15天才能拿到
+Vars
+	Dic<Array<Numeric>>		MyVar("TB_CASHFLOW_CASH");
+	Natural Map<Integer,Numeric> date2DicTime;
+Defs
+	Numeric getcurdate(Numeric readdate,Numeric remaintimes)
+	{
+		Numeric repdate;
+		integer baryear=YearFromDateTime(readdate);
+		integer barmonth=MonthFromDateTime(readdate);
+		If(RepType=="年报")
+			repdate=(baryear-1)*10000+1231;
+		Else if(RepType=="半年报")
+		{
+			Numeric temp=intpart((barmonth-1)/6);
+			repdate=iif(temp==0,baryear-1,baryear)*10000+iif(temp==0,12,6)*100+iif(temp==0,31,30);
+		}
+		Else If(RepType=="季报")
+		{
+			Numeric temp=intpart((barmonth-1)/3);
+			repdate=iif(temp==0,baryear-1,baryear)*10000+iif(temp==0,12,temp*3)*100+iif(temp<2,31,30);
+		}
+		if(remaintimes==0)
+			Return repdate;
+		Else
+			return getcurdate(repdate,remaintimes-1);
+	}
+Events
+	OnReady()
+	{
+		Range[0:DataSourceSize()-1]
+		{
+			Array<Numeric> datearr;
+			GetDicTimeRange(MyVar,datearr,0,SystemDateTime);
+			Numeric i;
+			for i=0 to GetArraySize(datearr)-1
+			{
+				Array<Numeric> tempvar;
+				if(GetDicValue(MyVar,datearr[i],tempvar))
+				{
+					date2DicTime[intpart(utc2local(tempvar[0]))]=datearr[i];
+				}
+			}
+		}
+	}
+	OnBar(ArrayRef<Integer> indexs)
+	{
+		Range[0:DataSourceSize()-1]
+		{
+			Array<Numeric> tempvar;
+			Numeric dictime;
+			Integer repdate=IntPart(getcurdate(DateAdd(date,(-1)*dateshift),backtimes));
+			Commentary("repdate="+text(repdate));
+			if(MapFind(date2DicTime,repdate,dictime))
+			{
+				GetDicValue(MyVar,dictime,tempvar);
+				Commentary("读到的"+text(utc2local(tempvar[0])));
+				PlotNumeric("报告时间",tempvar[0]);
+				PlotNumeric("汇率变动对现金及现金等价物的影响",tempvar[1]);
+				PlotNumeric("影响现金及现金等价物的其他科目",tempvar[2]);
+				PlotNumeric("影响现金及现金等价物的调整项目",tempvar[3]);
+				PlotNumeric("现金及现金等价物净增加额",tempvar[4]);
+				PlotNumeric("加:期初现金及现金等价物余额",tempvar[5]);
+				PlotNumeric("期末现金及现金等价物余额",tempvar[6]);
+				PlotNumeric("现金的期末余额",tempvar[7]);
+				PlotNumeric("减:现金的期初余额",tempvar[8]);
+				PlotNumeric("加:现金等价物的期末余额",tempvar[9]);
+				PlotNumeric("减:现金等价物的期初余额",tempvar[10]);
+				PlotNumeric("(附注)现金特殊项目",tempvar[11]);
+				PlotNumeric("(附注)现金调整项目",tempvar[12]);
+				PlotNumeric("(附注)现金及现金等价物净增加额",tempvar[13]);
+				PlotNumeric("加:现金净额前后对比调整项目",tempvar[14]);
+			}
+		}
+	}
+//------------------------------------------------------------------------
+// 编译版本	GS2021.04.16
+// 版权所有	TradeBlazer Software 2003－2025
+// 更改声明	TradeBlazer Software保留对TradeBlazer平
+//			台每一版本的TradeBlazer公式修改和重写的权利
+//------------------------------------------------------------------------

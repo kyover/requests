@@ -1,0 +1,42 @@
+//------------------------------------------------------------------------
+// 简称: TB_FUNDINFO_FUNDPOSITIONS
+// 名称: 基金重仓股
+// 类别: 公式应用
+// 类型: 内建应用
+//------------------------------------------------------------------------
+Params
+	Enum<String>    BackType(["基础数据回溯","BAR回溯"]);//回溯类型
+	Numeric         BackLength(0);//回溯周期
+	Numeric         index(0);//选择数据序号
+Vars
+	Dic<Array<Array<String>>>		MyVar("TB_FUNDINFO_FUNDPOSITIONS");
+Events
+    OnInit()
+    {
+        Range[0:DataCount()-1]
+        {
+            If(BackType == "基础数据回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackTime);
+            Else If(BackType == "BAR回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackBar);
+        }
+    }
+
+    OnBar(ArrayRef<Integer> indexs)
+    {
+        Range[0:DataSourceSize()-1]
+        {
+			Plotnumeric("序号",Value(MyVar[BackLength][index][0]));
+			PlotString("股票代码",MyVar[BackLength][index][1]);
+			Plotnumeric("持股数量(股)",Value(MyVar[BackLength][index][2]));
+			Plotnumeric("市值(元)",Value(MyVar[BackLength][index][3]));
+			Plotnumeric("占资产净值比例",Value(MyVar[BackLength][index][4]));
+			PlotString("投资类型",MyVar[BackLength][index][5]);
+		}
+	}
+//------------------------------------------------------------------------
+// 编译版本	GS2021.04.16
+// 版权所有	TradeBlazer Software 2003－2025
+// 更改声明	TradeBlazer Software保留对TradeBlazer平
+//			台每一版本的TradeBlazer公式修改和重写的权利
+//------------------------------------------------------------------------

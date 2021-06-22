@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/wordconf/txt/上市证券.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/wordconf/txt/五日分钟级累计平均成交额.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/wordconf/txt/其他.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/wordconf/股票合约属性.txt" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

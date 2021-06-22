@@ -1,0 +1,52 @@
+//------------------------------------------------------------------------
+// 简称: TB_CAPITAL_LEVEL
+// 名称: 股本层次
+// 类别: 公式应用
+// 类型: 内建应用
+//------------------------------------------------------------------------
+Params
+	Enum<String>    BackType(["基础数据回溯","BAR回溯"]);//回溯类型
+	Numeric         BackLength(0);//回溯周期
+Vars
+	Dic<Array<Numeric>>		MyVar("TB_CAPITAL_LEVEL");
+Events
+    OnInit()
+    {
+        Range[0:DataCount()-1]
+        {
+            If(BackType == "基础数据回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackTime);
+            Else If(BackType == "BAR回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackBar);
+        }
+    }
+
+    OnBar(ArrayRef<Integer> indexs)
+    {
+        Range[0:DataSourceSize()-1]
+        {
+			PlotNumeric("报告时间",MyVar[BackLength][0]);
+			PlotNumeric("总股本(股)",MyVar[BackLength][1]);
+			PlotNumeric("A股(股)",MyVar[BackLength][2]);
+			PlotNumeric("流通A股(股)",MyVar[BackLength][3]);
+			PlotNumeric("有限售条件的流通A股(股)(计算）",MyVar[BackLength][4]);
+			PlotNumeric("无限售条件流通A股(股)（计算）",MyVar[BackLength][5]);
+			PlotNumeric("有限售条件的流通A股(股)(披露）",MyVar[BackLength][6]);
+			PlotNumeric("无限售条件流通A股(股)（披露）",MyVar[BackLength][7]);
+			PlotNumeric("未流通A股(股)",MyVar[BackLength][8]);
+			PlotNumeric("B股(股)",MyVar[BackLength][9]);
+			PlotNumeric("流通B股(股)",MyVar[BackLength][10]);
+			PlotNumeric("未流通B股(股)",MyVar[BackLength][11]);
+			PlotNumeric("H股(股)",MyVar[BackLength][12]);
+			PlotNumeric("海外上市股(股)",MyVar[BackLength][13]);
+			PlotNumeric("S股(股)",MyVar[BackLength][14]);
+			PlotNumeric("N股(股)",MyVar[BackLength][15]);
+			PlotNumeric("增发、配股未上市股份（股）（披露）",MyVar[BackLength][16]);
+		}
+	}
+//------------------------------------------------------------------------
+// 编译版本	GS2021.04.16
+// 版权所有	TradeBlazer Software 2003－2025
+// 更改声明	TradeBlazer Software保留对TradeBlazer平
+//			台每一版本的TradeBlazer公式修改和重写的权利
+//------------------------------------------------------------------------

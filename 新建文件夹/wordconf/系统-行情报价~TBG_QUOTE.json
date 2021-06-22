@@ -1,0 +1,62 @@
+[
+ {
+  "groupId": "TBG_QUOTE",
+  "name": "TBG_QUOTE",
+  "nameDescription": "系统-行情报价",
+  "wordType": "double",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_QUOTE",
+  "name": "TB_QUOTE_capital",
+  "nameDescription": "行情报价股本",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 4,
+  "subNames": [
+   "发布时间",
+   "上市日期",
+   "总股本",
+   "流通股本"
+  ]
+ },
+ {
+  "groupId": "TBG_QUOTE",
+  "name": "TB_QUOTE_finance",
+  "nameDescription": "行情报价财务",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 27,
+  "subNames": [
+   "发布时间",
+   "每股收益",
+   "每股净资产",
+   "加权净资产收益率",
+   "营业总收入",
+   "营业总收入同比",
+   "营业利润",
+   "非经营性净收益",
+   "利润总额",
+   "净利润",
+   "归母净利润",
+   "归母净利润同比",
+   "未分配利润",
+   "每股未分配利润",
+   "销售毛利率",
+   "总资产",
+   "流动资产",
+   "固定资产",
+   "无形资产",
+   "总负债",
+   "流动负债",
+   "非流动负债",
+   "资产负债比率",
+   "股东权益",
+   "股东权益比",
+   "每股公积金",
+   "归母净利润报告期"
+  ]
+ }
+]

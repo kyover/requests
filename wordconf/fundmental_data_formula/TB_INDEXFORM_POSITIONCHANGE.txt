@@ -1,0 +1,39 @@
+//------------------------------------------------------------------------
+// 简称: TB_INDEXFORM_POSITIONCHANGE
+// 名称: 仓位变化
+// 类别: 公式应用
+// 类型: 内建应用
+//------------------------------------------------------------------------
+Params
+	Enum<String>    BackType(["基础数据回溯","BAR回溯"]);//回溯类型
+	Numeric         BackLength(0);//回溯周期
+Vars
+	Dic<Array<Numeric>>		MyVar("TB_INDEXFORM_POSITIONCHANGE");
+Events
+    OnInit()
+    {
+        Range[0:DataCount()-1]
+        {
+            If(BackType == "基础数据回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackTime);
+            Else If(BackType == "BAR回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackBar);
+        }
+    }
+
+    OnBar(ArrayRef<Integer> indexs)
+    {
+        Range[0:DataSourceSize()-1]
+        {
+			PlotNumeric("换手",MyVar[BackLength][0]);
+			PlotNumeric("净流入",MyVar[BackLength][1]);
+			PlotNumeric("流入",MyVar[BackLength][2]);
+			PlotNumeric("流出",MyVar[BackLength][3]);
+		}
+	}
+//------------------------------------------------------------------------
+// 编译版本	GS2021.04.16
+// 版权所有	TradeBlazer Software 2003－2025
+// 更改声明	TradeBlazer Software保留对TradeBlazer平
+//			台每一版本的TradeBlazer公式修改和重写的权利
+//------------------------------------------------------------------------

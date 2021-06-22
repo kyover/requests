@@ -1,0 +1,563 @@
+[
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TBG_COMPANYINFO",
+  "nameDescription": "公司资料",
+  "wordType": "string",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_BALANCESUMMARY",
+  "nameDescription": "资产负债表摘要",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 10,
+  "subNames": [
+   "报告时间",
+   "资产总计",
+   "负债合计",
+   "所有者权益(或股东权益)合计",
+   "负债和所有者权益(或股东权益)总计",
+   "流动资产合计",
+   "非流动资产合计",
+   "流动负债合计",
+   "非流动负债合计",
+   "归属母公司股东权益合计"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_BUSINESSANALYSISAREA",
+  "nameDescription": "经营分析地区分类",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 7,
+  "subNames": [
+   "主营构成_GBK",
+   "主营业务收入",
+   "主营业务成本",
+   "上年同期主营业务收入(元)",
+   "上年同期主营业务成本(元)",
+   "主营业务收入同比",
+   "主营业务成本同比"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_BUSINESSANALYSISINDUSTRY",
+  "nameDescription": "经营分析行业分类",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 7,
+  "subNames": [
+   "主营构成_GBK",
+   "主营业务收入",
+   "主营业务成本",
+   "上年同期主营业务收入(元)",
+   "上年同期主营业务成本(元)",
+   "主营业务收入同比",
+   "主营业务成本同比"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_BUSINESSANALYSISPRODUCT",
+  "nameDescription": "经营分析产品分类",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 7,
+  "subNames": [
+   "主营构成_GBK",
+   "主营业务收入",
+   "主营业务成本",
+   "上年同期主营业务收入(元)",
+   "上年同期主营业务成本(元)",
+   "主营业务收入同比",
+   "主营业务成本同比"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_CASHSUMMARY",
+  "nameDescription": "现金流量表摘要",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 10,
+  "subNames": [
+   "报告时间",
+   "经营活动现金流入小计",
+   "经营活动现金流出小计",
+   "经营活动产生的现金流量净额",
+   "投资活动现金流入小计",
+   "投资活动现金流出小计",
+   "投资活动产生的现金流量净额",
+   "筹资活动现金流入小计",
+   "筹资活动现金流出小计",
+   "筹资活动产生的现金流量净额"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_COMPANYPROFILE",
+  "nameDescription": "公司概况",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 8,
+  "subNames": [
+   "公司中文名称_GBK",
+   "曾用名_GBK",
+   "省份_GBK",
+   "所属申万行业_GBK",
+   "所属概念板块_GBK",
+   "董事长_GBK",
+   "法人代表_GBK",
+   "主营业务_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_COMPANYSTATUSCHANGE",
+  "nameDescription": "公司状态更改",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 4,
+  "subNames": [
+   "证券代码_GBK",
+   "变更类型_GBK",
+   "变动原因说明_GBK",
+   "变更时间"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_CONTACTINFORMATION",
+  "nameDescription": "联系信息",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 12,
+  "subNames": [
+   "公司中文名称_GBK",
+   "省份_GBK",
+   "公司注册地址_GBK",
+   "公司注册地址邮编_GBK",
+   "公司办公地址_GBK",
+   "公司办公地址邮编_GBK",
+   "公司联系地址_GBK",
+   "公司联系地址邮编_GBK",
+   "公司电子邮箱_GBK",
+   "公司网址_GBK",
+   "信息披露网址_GBK",
+   "信息披露报纸_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_CONTACTPERSONNEL",
+  "nameDescription": "联系人员",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 9,
+  "subNames": [
+   "董事会秘书_GBK",
+   "董秘电话_GBK",
+   "董秘传真_GBK",
+   "董秘电子邮件_GBK",
+   "证券/股证事务代表_GBK",
+   "证券事务代表电话_GBK",
+   "证券事务代表传真_GBK",
+   "证券事务代表电子邮件_GBK",
+   "董秘授权代表_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_FREEZEANDPLEDGE",
+  "nameDescription": "股东股权冻结和质押",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 17,
+  "subNames": [
+   "信息来源_GBK",
+   "类别选择_GBK",
+   "股权被冻结质押股东名称_GBK",
+   "股权被冻结质押股东序号",
+   "接受股权质押方_GBK",
+   "涉及股数(股)",
+   "占冻结质押方持股数比例",
+   "占总股本比例",
+   "股权冻结质押原因_GBK",
+   "冻结质押期限起始日",
+   "冻结质押期限截止日",
+   "事项描述与进展说明_GBK",
+   "初始质押股数(股)",
+   "预计解押日期",
+   "股权被冻结质押股东所属性质_GBK",
+   "首次信息发布日期",
+   "信息发布日期"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_FREEZEANDPLEDGEDETAILS",
+  "nameDescription": "股东股权冻结和质押明细",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 6,
+  "subNames": [
+   "截止日期",
+   "待回购余量(万股)",
+   "待回购无限售条件余量(万股)",
+   "待回购有限售条件余量(万股)",
+   "质押笔数",
+   "质押比例"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_INCOMESUMMARY",
+  "nameDescription": "利润表摘要",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 8,
+  "subNames": [
+   "报告时间",
+   "营业收入",
+   "营业支出",
+   "营业利润",
+   "利润总额",
+   "净利润",
+   "其他综合收益",
+   "综合收益总额"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_INDUSTRYDIVISION",
+  "nameDescription": "行业划分",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 5,
+  "subNames": [
+   "发布时间",
+   "一级行业名称_GBK",
+   "二级行业名称_GBK",
+   "三级行业名称_GBK",
+   "四级行业名称_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_INDUSTRYPRODUCTS",
+  "nameDescription": "行业产品",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 2,
+  "subNames": [
+   "经营范围-主营_GBK",
+   "经营范围-兼营_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_INSTITUTIONALPOSITION",
+  "nameDescription": "机构持仓",
+  "wordType": "string_2d",
+  "wordDataType": 1,
+  "wordNum": 8,
+  "subNames": [
+   "机构类型_GBK",
+   "QFII",
+   "保险",
+   "信托",
+   "券商",
+   "基金",
+   "社保",
+   "机构汇总"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_LISTEDSECURITIES",
+  "nameDescription": "上市证券",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 8,
+  "subNames": [
+   "A股证券简称_GBK",
+   "A股证券代码_GBK",
+   "B股证券简称_GBK",
+   "B股证券代码_GBK",
+   "H股证券简称_GBK",
+   "H股证券代码_GBK",
+   "CDR证券简称_GBK",
+   "CDR证券代码_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_MANAGEMENTSHAREHOLDING",
+  "nameDescription": "管理层持股",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 9,
+  "subNames": [
+   "序号",
+   "领导姓名_GBK",
+   "职位描述_GBK",
+   "在任与否_GBK",
+   "任职离职说明_GBK",
+   "期初持股数(股)",
+   "期末持股数(股)",
+   "年度报酬/报酬总额(元)",
+   "信息来源_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_NAME",
+  "nameDescription": "公司名称",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 6,
+  "subNames": [
+   "证券名称_GBK",
+   "证券代码_GBK",
+   "公司中文名称_GBK",
+   "公司英文名称_GBK",
+   "中文名称缩写_GBK",
+   "英文名称缩写_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_NUMBEROFSHAREHOLDERS",
+  "nameDescription": "股东人数",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 6,
+  "subNames": [
+   "统计日期",
+   "总户数",
+   "A股户数",
+   "户均持股数",
+   "A股户均持股数",
+   "前十大股东持股比例"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_OTHER",
+  "nameDescription": "其他",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 1,
+  "subNames": [
+   "公司简介_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_RAISEDFUNDSINVESTE",
+  "nameDescription": "募集资金投向",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 10,
+  "subNames": [
+   "项目名称_GBK",
+   "项目说明_GBK",
+   "是否变更_GBK",
+   "计划总投资额(万元)",
+   "计划投入募集资金(万元)",
+   "已投入募集资金(万元)",
+   "建设期(月)",
+   "投资回收期(月)",
+   "预计年新增净利润(万元)",
+   "内部收益率"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_REGISTRATION",
+  "nameDescription": "注册信息",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 9,
+  "subNames": [
+   "成立日期",
+   "法人代表_GBK",
+   "企业法人营业执照注册号_GBK",
+   "总经理_GBK",
+   "注册资本(元)",
+   "法律顾问_GBK",
+   "会计师事务所_GBK",
+   "公司注册地址_GBK",
+   "公司注册地址邮编_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_SHAREHOLDERSCIRCULATETOPTEN",
+  "nameDescription": "十大流通股东",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 6,
+  "subNames": [
+   "名次",
+   "股东名称_GBK",
+   "股份类型_GBK",
+   "股本性质描述_GBK",
+   "持股数",
+   "占流通股比例"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_SHAREHOLDERSTOPTEN",
+  "nameDescription": "十大股东",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 8,
+  "subNames": [
+   "名次",
+   "股东名称_GBK",
+   "股份类型_GBK",
+   "股本性质描述_GBK",
+   "持股数_GBK",
+   "占总股本比例_GBK",
+   "增减_GBK",
+   "变动比例_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_STOCKLIFTING",
+  "nameDescription": "股票解禁",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 7,
+  "subNames": [
+   "解禁日期",
+   "解禁数量(万股)",
+   "新增占已流通比例",
+   "已流通A股(万股)",
+   "待流通A股(万股)",
+   "流通比例",
+   "股本变动说明_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_COMPANYINFO_STOCKSECONDARYOFFERING",
+  "nameDescription": "股票增发",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 12,
+  "subNames": [
+   "发行方式_GBK",
+   "发行对象_GBK",
+   "增发日期",
+   "发行总量(股)",
+   "每股发行价格(元)",
+   "网上申购代码",
+   "网上有效发行总量(股)",
+   "网上公开发行日期",
+   "募集资金净额",
+   "增发股份上市日期",
+   "募集资金到账日",
+   "增发目的_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_HOLDINGS_BROKER",
+  "nameDescription": "机构持仓-券商",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 5,
+  "subNames": [
+   "机构名称_GBK",
+   "持股总数（股）",
+   "持股市值（元）",
+   "占总股本比例（%）",
+   "占流通股比例（%）"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_HOLDINGS_FUND",
+  "nameDescription": "机构持仓-基金",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 5,
+  "subNames": [
+   "机构名称_GBK",
+   "持股总数（股）",
+   "持股市值（元）",
+   "占总股本比例（%）",
+   "占流通股比例（%）"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_HOLDINGS_INSURANCE",
+  "nameDescription": "机构持仓-保险",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 5,
+  "subNames": [
+   "机构名称_GBK",
+   "持股总数（股）",
+   "持股市值（元）",
+   "占总股本比例（%）",
+   "占流通股比例（%）"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_HOLDINGS_PENSION",
+  "nameDescription": "机构持仓-社保",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 5,
+  "subNames": [
+   "机构名称_GBK",
+   "持股总数（股）",
+   "持股市值（元）",
+   "占总股本比例（%）",
+   "占流通股比例（%）"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_HOLDINGS_QFII",
+  "nameDescription": "机构持仓-QFII",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 5,
+  "subNames": [
+   "机构名称_GBK",
+   "持股总数（股）",
+   "持股市值（元）",
+   "占总股本比例（%）",
+   "占流通股比例（%）"
+  ]
+ },
+ {
+  "groupId": "TBG_COMPANYINFO",
+  "name": "TB_HOLDINGS_TRUST",
+  "nameDescription": "机构持仓-信托",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 5,
+  "subNames": [
+   "机构名称_GBK",
+   "持股总数（股）",
+   "持股市值（元）",
+   "占总股本比例（%）",
+   "占流通股比例（%）"
+  ]
+ }
+]

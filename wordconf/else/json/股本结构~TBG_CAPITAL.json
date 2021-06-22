@@ -1,0 +1,123 @@
+[
+ {
+  "groupId": "TBG_CAPITAL",
+  "name": "TBG_CAPITAL",
+  "nameDescription": "股本结构",
+  "wordType": "string",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_CAPITAL",
+  "name": "TB_CAPITAL_CHANGE",
+  "nameDescription": "股本变动",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 3,
+  "subNames": [
+   "报告时间(numeric)",
+   "股本变动原因类别_GBK",
+   "股本变动原因说明_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_CAPITAL",
+  "name": "TB_CAPITAL_CIRCULATIONSHARES",
+  "nameDescription": "流通股份",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 15,
+  "subNames": [
+   "报告时间",
+   "流通股份(股)",
+   "已上市流通A股(包含高管股)(股)",
+   "战略投资者配售持股(股)",
+   "一般法人配售持股(股)",
+   "基金配售持股(股)",
+   "增发未上市(股)",
+   "配股未上市(股)",
+   "其他流通股份(股)",
+   "有限售流通A股(股)",
+   "有限售流通股中职工股(股)",
+   "B股_旧(股)",
+   "未流通B股_旧",
+   "有限售B股(股)",
+   "外资持A股(股)"
+  ]
+ },
+ {
+  "groupId": "TBG_CAPITAL",
+  "name": "TB_CAPITAL_LEVEL",
+  "nameDescription": "股本层次",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 17,
+  "subNames": [
+   "报告时间",
+   "总股本(股)",
+   "A股(股)",
+   "流通A股(股)",
+   "有限售条件的流通A股(股)(计算）",
+   "无限售条件流通A股(股)（计算）",
+   "有限售条件的流通A股(股)(披露）",
+   "无限售条件流通A股(股)（披露）",
+   "未流通A股(股)",
+   "B股(股)",
+   "流通B股(股)",
+   "未流通B股(股)",
+   "H股(股)",
+   "海外上市股(股)",
+   "S股(股)",
+   "N股(股)",
+   "增发、配股未上市股份（股）（披露）"
+  ]
+ },
+ {
+  "groupId": "TBG_CAPITAL",
+  "name": "TB_CAPITAL_NONCIRCULATIONSHARES",
+  "nameDescription": "未流通股份",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 15,
+  "subNames": [
+   "报告时间",
+   "发起人股(股)",
+   "国家股(股)",
+   "国有法人股(股)",
+   "境内法人股(股)",
+   "外资法人股(股)",
+   "其它发起人股(股)",
+   "募集法人股(股)",
+   "募集国有法人股(股)",
+   "自然人法人股(股)",
+   "职工股(股)",
+   "转配股(股)",
+   "优先股及其他(股)",
+   "优先股(股)",
+   "其他外资股(股)"
+  ]
+ },
+ {
+  "groupId": "TBG_CAPITAL",
+  "name": "TB_CAPITAL_RESTRICTEDSTOCK",
+  "nameDescription": "限售股份",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 12,
+  "subNames": [
+   "报告时间",
+   "有限售条件的流通股(股)",
+   "国家持股(股)",
+   "国有法人持股(股)",
+   "其他内资持股(股)",
+   "境内法人持股(股)",
+   "境内自然人持股(股)",
+   "高管股(股)",
+   "外资持股(股)",
+   "境外法人持股(股)",
+   "境外自然人持股(股)",
+   "其他有限售 (股)"
+  ]
+ }
+]

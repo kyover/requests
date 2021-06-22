@@ -1,0 +1,53 @@
+//------------------------------------------------------------------------
+// 简称: TB_COMPANYINFO_FREEZEANDPLEDGE
+// 名称: 股东股权冻结和质押
+// 类别: 公式应用
+// 类型: 内建应用
+//------------------------------------------------------------------------
+Params
+	Enum<String>    BackType(["基础数据回溯","BAR回溯"]);//回溯类型
+	Numeric         BackLength(0);//回溯周期
+	Numeric         index(0);//选择数据序号
+Vars
+	Dic<Array<Array<String>>>		MyVar("TB_COMPANYINFO_FREEZEANDPLEDGE");
+Events
+    OnInit()
+    {
+        Range[0:DataCount()-1]
+        {
+            If(BackType == "基础数据回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackTime);
+            Else If(BackType == "BAR回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackBar);
+        }
+    }
+
+    OnBar(ArrayRef<Integer> indexs)
+    {
+        Range[0:DataSourceSize()-1]
+        {
+			PlotString("信息来源",MyVar[BackLength][index][0]);
+			PlotString("类别选择",MyVar[BackLength][index][1]);
+			PlotString("股权被冻结质押股东名称",MyVar[BackLength][index][2]);
+			Plotnumeric("股权被冻结质押股东序号",Value(MyVar[BackLength][index][3]));
+			PlotString("接受股权质押方",MyVar[BackLength][index][4]);
+			Plotnumeric("涉及股数(股)",Value(MyVar[BackLength][index][5]));
+			Plotnumeric("占冻结质押方持股数比例",Value(MyVar[BackLength][index][6]));
+			Plotnumeric("占总股本比例",Value(MyVar[BackLength][index][7]));
+			PlotString("股权冻结质押原因",MyVar[BackLength][index][8]);
+			Plotnumeric("冻结质押期限起始日",Value(MyVar[BackLength][index][9]));
+			Plotnumeric("冻结质押期限截止日",Value(MyVar[BackLength][index][10]));
+			PlotString("事项描述与进展说明",MyVar[BackLength][index][11]);
+			Plotnumeric("初始质押股数(股)",Value(MyVar[BackLength][index][12]));
+			Plotnumeric("预计解押日期",Value(MyVar[BackLength][index][13]));
+			PlotString("股权被冻结质押股东所属性质",MyVar[BackLength][index][14]);
+			Plotnumeric("首次信息发布日期",Value(MyVar[BackLength][index][15]));
+			Plotnumeric("信息发布日期",Value(MyVar[BackLength][index][16]));
+		}
+	}
+//------------------------------------------------------------------------
+// 编译版本	GS2021.04.16
+// 版权所有	TradeBlazer Software 2003－2025
+// 更改声明	TradeBlazer Software保留对TradeBlazer平
+//			台每一版本的TradeBlazer公式修改和重写的权利
+//------------------------------------------------------------------------

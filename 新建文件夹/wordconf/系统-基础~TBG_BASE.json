@@ -1,0 +1,73 @@
+[
+ {
+  "groupId": "TBG_BASE",
+  "name": "TBG_BASE",
+  "nameDescription": "系统-基础",
+  "wordType": "string",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_BASE",
+  "name": "TB_BROKERAGE",
+  "nameDescription": "手续费",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 4,
+  "subNames": [
+   "开仓手续费",
+   "平仓手续费",
+   "平今仓手续费",
+   "成交额万分比(0),元/手(1)"
+  ]
+ },
+ {
+  "groupId": "TBG_BASE",
+  "name": "TB_Base_CategoryType",
+  "nameDescription": "大类分类",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_BASE",
+  "name": "TB_Base_ExchangeType",
+  "nameDescription": "交易所分类",
+  "wordType": "string_2d",
+  "wordDataType": 1,
+  "wordNum": 5,
+  "subNames": [
+   "交易所简称",
+   "交易所索引",
+   "交易所名称_GBK",
+   "品种大类",
+   "市场类型"
+  ]
+ },
+ {
+  "groupId": "TBG_BASE",
+  "name": "TB_Base_MarketType",
+  "nameDescription": "市场分类",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_BASE",
+  "name": "TB_HISQUOTE_PATCH_RECORD",
+  "nameDescription": "行情运维记录",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 5,
+  "subNames": [
+   "分类",
+   "类型名",
+   "数据类型",
+   "起始时间",
+   "结束时间"
+  ]
+ }
+]

@@ -1,0 +1,37 @@
+[
+ {
+  "groupId": "TBG_POSITIONS",
+  "name": "TBG_POSITIONS",
+  "nameDescription": "会员持仓",
+  "wordType": "string",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_POSITIONS",
+  "name": "TB_MEMBER_positions_long",
+  "nameDescription": "多头持仓",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 3,
+  "subNames": [
+   "会员简称_GBK",
+   "持买单量",
+   "增减"
+  ]
+ },
+ {
+  "groupId": "TBG_POSITIONS",
+  "name": "TB_MEMBER_positions_short",
+  "nameDescription": "空头持仓",
+  "wordType": "string_2d",
+  "wordDataType": 0,
+  "wordNum": 3,
+  "subNames": [
+   "会员简称_GBK",
+   "持卖单量",
+   "增减"
+  ]
+ }
+]

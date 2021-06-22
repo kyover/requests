@@ -1,0 +1,29 @@
+[
+ {
+  "groupId": "TBG_HOLIDAY",
+  "name": "TBG_HOLIDAY",
+  "nameDescription": "系统-假日",
+  "wordType": "int",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_HOLIDAY",
+  "name": "TB_TradeTime",
+  "nameDescription": "交易时间",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_HOLIDAY",
+  "name": "TB_holiday",
+  "nameDescription": "假日",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ }
+]

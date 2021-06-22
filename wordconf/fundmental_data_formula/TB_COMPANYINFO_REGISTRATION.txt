@@ -1,0 +1,44 @@
+//------------------------------------------------------------------------
+// 简称: TB_COMPANYINFO_REGISTRATION
+// 名称: 注册信息
+// 类别: 公式应用
+// 类型: 内建应用
+//------------------------------------------------------------------------
+Params
+	Enum<String>    BackType(["基础数据回溯","BAR回溯"]);//回溯类型
+	Numeric         BackLength(0);//回溯周期
+Vars
+	Dic<Array<String>>		MyVar("TB_COMPANYINFO_REGISTRATION");
+Events
+    OnInit()
+    {
+        Range[0:DataCount()-1]
+        {
+            If(BackType == "基础数据回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackTime);
+            Else If(BackType == "BAR回溯")
+                SetDicFlag(MyVar, Enum_DicFlag_BackBar);
+        }
+    }
+
+    OnBar(ArrayRef<Integer> indexs)
+    {
+        Range[0:DataSourceSize()-1]
+        {
+			Plotnumeric("成立日期",Value(MyVar[BackLength][0]));
+			PlotString("法人代表",MyVar[BackLength][1]);
+			PlotString("企业法人营业执照注册号",MyVar[BackLength][2]);
+			PlotString("总经理",MyVar[BackLength][3]);
+			Plotnumeric("注册资本(元)",Value(MyVar[BackLength][4]));
+			PlotString("法律顾问",MyVar[BackLength][5]);
+			PlotString("会计师事务所",MyVar[BackLength][6]);
+			PlotString("公司注册地址",MyVar[BackLength][7]);
+			PlotString("公司注册地址邮编",MyVar[BackLength][8]);
+		}
+	}
+//------------------------------------------------------------------------
+// 编译版本	GS2021.04.16
+// 版权所有	TradeBlazer Software 2003－2025
+// 更改声明	TradeBlazer Software保留对TradeBlazer平
+//			台每一版本的TradeBlazer公式修改和重写的权利
+//------------------------------------------------------------------------

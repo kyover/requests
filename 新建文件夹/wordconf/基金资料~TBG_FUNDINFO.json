@@ -1,0 +1,57 @@
+[
+ {
+  "groupId": "TBG_FUNDINFO",
+  "name": "TBG_FUNDINFO",
+  "nameDescription": "基金资料",
+  "wordType": "string",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_FUNDINFO",
+  "name": "TB_FUNDINFO_FUNDMANAGER",
+  "nameDescription": "基金经理人",
+  "wordType": "string_2d",
+  "wordDataType": 1,
+  "wordNum": 8,
+  "subNames": [
+   "姓名_GBK",
+   "职位名称_GBK",
+   "在任与否_GBK",
+   "到任日期",
+   "离职日期",
+   "任职天数",
+   "任职期间基金净值增长率",
+   "信息来源_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_FUNDINFO",
+  "name": "TB_FUNDINFO_FUNDPOSITIONS",
+  "nameDescription": "基金重仓股",
+  "wordType": "string_2d",
+  "wordDataType": 1,
+  "wordNum": 6,
+  "subNames": [
+   "序号",
+   "股票代码_GBK",
+   "持股数量(股)",
+   "市值(元)",
+   "占资产净值比例",
+   "投资类型_GBK"
+  ]
+ },
+ {
+  "groupId": "TBG_FUNDINFO",
+  "name": "TB_FUNDINFO_MEMBER",
+  "nameDescription": "基金成分",
+  "wordType": "string_2d",
+  "wordDataType": 1,
+  "wordNum": 2,
+  "subNames": [
+   "合约代码",
+   "中文描述_GBK"
+  ]
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "groupId": "TBG_INDUSTRY",
+  "name": "TBG_INDUSTRY",
+  "nameDescription": "系统-板块",
+  "wordType": "string",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_INDUSTRY",
+  "name": "TB_INDUSTRY",
+  "nameDescription": "板块",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_INDUSTRY",
+  "name": "TB_INDUSTRY_MAP",
+  "nameDescription": "板块映射",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ }
+]

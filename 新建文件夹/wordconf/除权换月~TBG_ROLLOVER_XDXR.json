@@ -1,0 +1,40 @@
+[
+ {
+  "groupId": "TBG_ROLLOVER_XDXR",
+  "name": "TBG_ROLLOVER_XDXR",
+  "nameDescription": "除权换月",
+  "wordType": "string",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_ROLLOVER_XDXR",
+  "name": "TB_ROLLOVER",
+  "nameDescription": "换月",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 3,
+  "subNames": [
+   "期货换月合约",
+   "期货换月前价格",
+   "期货换月后价格"
+  ]
+ },
+ {
+  "groupId": "TBG_ROLLOVER_XDXR",
+  "name": "TB_XDXR",
+  "nameDescription": "除权除息",
+  "wordType": "double_1d",
+  "wordDataType": 1,
+  "wordNum": 6,
+  "subNames": [
+   "发布时间",
+   "每股送股",
+   "配股比例",
+   "配股价格",
+   "每股派现金",
+   "股票除权前价格"
+  ]
+ }
+]

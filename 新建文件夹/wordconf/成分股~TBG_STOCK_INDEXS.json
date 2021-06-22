@@ -1,0 +1,38 @@
+[
+ {
+  "groupId": "TBG_STOCK_INDEXS",
+  "name": "TBG_STOCK_INDEXS",
+  "nameDescription": "成分股",
+  "wordType": "string",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_STOCK_INDEXS",
+  "name": "TB_FUTURESINDEX_MEMBER",
+  "nameDescription": "期货分类成分",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_STOCK_INDEXS",
+  "name": "TB_MEMBER",
+  "nameDescription": "历史成分股",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ },
+ {
+  "groupId": "TBG_STOCK_INDEXS",
+  "name": "TB_STOCKINDEX_MEMBER",
+  "nameDescription": "股票行业成分股",
+  "wordType": "string_1d",
+  "wordDataType": 1,
+  "wordNum": 0,
+  "subNames": []
+ }
+]

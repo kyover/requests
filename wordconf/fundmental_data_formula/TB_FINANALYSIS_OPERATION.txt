@@ -1,0 +1,90 @@
+//------------------------------------------------------------------------
+// 简称: TB_FINANALYSIS_OPERATION
+// 名称: 营运能力
+// 类别: 公式应用
+// 类型: 内建应用
+//------------------------------------------------------------------------
+Params
+	Enum<String>    RepType(["季报","半年报","年报"]);//报告类型
+	Numeric    		BackTimes(0);	  //报告期	0当期1上一期 以此类推 
+	Numeric         dateshift(15);	  //报告偏移天数 比如季度报可能在统计日期之后15天才能拿到
+Vars
+	Dic<Array<Numeric>>		MyVar("TB_FINANALYSIS_OPERATION");
+	Natural Map<Integer,Numeric> date2DicTime;
+Defs
+	Numeric getcurdate(Numeric readdate,Numeric remaintimes)
+	{
+		Numeric repdate;
+		integer baryear=YearFromDateTime(readdate);
+		integer barmonth=MonthFromDateTime(readdate);
+		If(RepType=="年报")
+			repdate=(baryear-1)*10000+1231;
+		Else if(RepType=="半年报")
+		{
+			Numeric temp=intpart((barmonth-1)/6);
+			repdate=iif(temp==0,baryear-1,baryear)*10000+iif(temp==0,12,6)*100+iif(temp==0,31,30);
+		}
+		Else If(RepType=="季报")
+		{
+			Numeric temp=intpart((barmonth-1)/3);
+			repdate=iif(temp==0,baryear-1,baryear)*10000+iif(temp==0,12,temp*3)*100+iif(temp<2,31,30);
+		}
+		if(remaintimes==0)
+			Return repdate;
+		Else
+			return getcurdate(repdate,remaintimes-1);
+	}
+Events
+	OnReady()
+	{
+		Range[0:DataSourceSize()-1]
+		{
+			Array<Numeric> datearr;
+			GetDicTimeRange(MyVar,datearr,0,SystemDateTime);
+			Numeric i;
+			for i=0 to GetArraySize(datearr)-1
+			{
+				Array<Numeric> tempvar;
+				if(GetDicValue(MyVar,datearr[i],tempvar))
+				{
+					date2DicTime[intpart(utc2local(tempvar[0]))]=datearr[i];
+				}
+			}
+		}
+	}
+	OnBar(ArrayRef<Integer> indexs)
+	{
+		Range[0:DataSourceSize()-1]
+		{
+			Array<Numeric> tempvar;
+			Numeric dictime;
+			Integer repdate=IntPart(getcurdate(DateAdd(date,(-1)*dateshift),backtimes));
+			Commentary("repdate="+text(repdate));
+			if(MapFind(date2DicTime,repdate,dictime))
+			{
+				GetDicValue(MyVar,dictime,tempvar);
+				Commentary("读到的"+text(utc2local(tempvar[0])));
+				PlotNumeric("报告时间",tempvar[0]);
+				PlotNumeric("流动比率",tempvar[1]);
+				PlotNumeric("速动比率",tempvar[2]);
+				PlotNumeric("超速动比率",tempvar[3]);
+				PlotNumeric("营业周期(天/次)",tempvar[4]);
+				PlotNumeric("存货周转率(次)",tempvar[5]);
+				PlotNumeric("存货周转天数(天/次)",tempvar[6]);
+				PlotNumeric("应收帐款周转率(次)",tempvar[7]);
+				PlotNumeric("应收帐款周转天数(天/次)",tempvar[8]);
+				PlotNumeric("应付帐款周转率(次)",tempvar[9]);
+				PlotNumeric("应付帐款周转天数(天/次)",tempvar[10]);
+				PlotNumeric("流动资产周转率(次)",tempvar[11]);
+				PlotNumeric("固定资产周转率(次)",tempvar[12]);
+				PlotNumeric("股东权益周转率(次)",tempvar[13]);
+				PlotNumeric("总资产周转率(次)",tempvar[14]);
+			}
+		}
+	}
+//------------------------------------------------------------------------
+// 编译版本	GS2021.04.16
+// 版权所有	TradeBlazer Software 2003－2025
+// 更改声明	TradeBlazer Software保留对TradeBlazer平
+//			台每一版本的TradeBlazer公式修改和重写的权利
+//------------------------------------------------------------------------
